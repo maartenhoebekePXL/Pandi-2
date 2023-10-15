@@ -22,7 +22,7 @@
         <li class="nav__symbols-item"><a class="nav__symbols-item__anchor" href="login.html"><i
                 class="nav__symbols-item__icon fa-regular fa-user" style="color: #ffffff;"></i></a></li>
         <li class="nav__symbols-item"><a class="nav__symbols-item__anchor" href="#"><i
-                class="nav__symbols-item__icon fa-regular fa-bag-shopping" style="color: #ffffff;"></i></a></li>
+                class="nav__symbols-item__icon fa-solid fa-basket-shopping" style="color: #ffffff;"></i></a></li>
         <li class="nav__symbols-item"><a class="nav__symbols-item__anchor" href="#"><i
                 class="nav__symbols-item__icon fa-solid fa-bars" id="nav__icon-3" style="color: #ffffff;"></i></a></li>
     </ul>
@@ -35,6 +35,17 @@
     <div class="login__create-account">
         <p>New user? Create an account here!</p>
     </div>
+    <form action="#" method="post" enctype="text/plain">
+        <label for="username"><b>Username</b></label>
+        <input type="text" id="username" placeholder="Enter Username" name="Firstname" required>
+        <label for="password"><b>Password</b></label>
+        <input type="password" id="password" placeholder="Enter Password" name="Password" required>
+        <button id="submit__button" type="submit" value="Login">Login</button>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+        <div class="container" style="background-color:#f1f1f1">
+            <span class="Password">Forgot <a href="#">password?</a></span>
+        </div>
+    </form>
 </section>
 </body>
 </html>

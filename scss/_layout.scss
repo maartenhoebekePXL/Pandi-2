@@ -3,6 +3,8 @@
 .nav {
   display: flex;
   justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
   margin: $margin-nav 0;
 
   &__logo {
@@ -16,6 +18,11 @@
     justify-content: space-between;
     list-style-type: none;
     font-size: $font-size;
+    flex-wrap: wrap;
+  }
+
+  &__list {
+    width: 400px;
   }
 
   &__list-item {
@@ -30,6 +37,7 @@
   &__symbols {
     position: absolute;
     right: $margin-nav-icon;
+    width: 150px;
 
     #nav__icon-3 {
       //display: none;
@@ -139,43 +147,68 @@
     background-color: $secundary-color;
     text-decoration: underline;
     color: $primary-color;
+    padding: 19px 35px;
   }
 
-  &__items {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  form {
+    border: 3px solid #f1f1f1;
   }
 
-  &__item {
-    width: 400px;
-    margin: 50px 25px 0 25px;
-    background-color: $secundary-color;
-    border-radius: 25px;
+  /* Full-width inputs */
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
 
-    &__img {
-      height: 100px;
-      img {
-        height: 100px;
-        margin-top: 10%;
-      }
+  #submit__button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  #submit__button:hover {
+    opacity: 0.8;
+  }
+
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+
+  .container {
+    padding: 16px;
+  }
+
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
     }
-
-    &__info {
-      color: $primary-color;
-      position: relative;
-      bottom: 0;
-      width: 400px;
-      display: flex;
-      flex-direction: column;
-      justify-content: right;
-    }
-
-    .shop__name-price {
-      display: flex;
-      font-size: 22px;
-      margin: 10px 20px 0 20px;
-      justify-content: space-between;
+    .cancelbtn {
+      width: 100%;
     }
   }
+}
+.footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  @include positioning(95%);
 }
