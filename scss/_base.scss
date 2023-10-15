@@ -1,0 +1,53 @@
+$primary-color: #101010;
+$secundary-color: #ffffff;
+$tertiary-color: #29ab87;
+
+$icon-width: 35px;
+$icon-color: #ffffff;
+
+$font-size: 22px;
+
+$margin-nav: 3rem;
+$margin-nav-icon: 2rem;
+$margin-nav-list: 15px;
+
+@mixin flexLayout() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin textAlign() {
+  text-align: center;
+}
+
+@mixin positioning($topValue) {
+  position: absolute;
+  top: $topValue;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scrollbar-width: none;
+}
+
+body {
+  scrollbar-width: none;
+  background-color: $primary-color;
+  color: $secundary-color;
+}
+
+#body__home {
+  background-image: url('../assets/Panda_jungle.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}

@@ -1,0 +1,181 @@
+@use 'base' as *;
+
+.nav {
+  display: flex;
+  justify-content: center;
+  margin: $margin-nav 0;
+
+  &__logo {
+    width: $icon-width;
+    position: absolute;
+    left: $margin-nav-icon;
+  }
+
+  &__list, &__symbols {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    font-size: $font-size;
+  }
+
+  &__list-item {
+    margin: 0 $margin-nav-list;
+
+    &__anchor {
+      text-decoration: none;
+      color: $secundary-color;
+    }
+  }
+
+  &__symbols {
+    position: absolute;
+    right: $margin-nav-icon;
+
+    #nav__icon-3 {
+      //display: none;
+    }
+  }
+
+  &__symbols-item {
+    &__icon {
+      width: $icon-width;
+    }
+  }
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 87vh;
+
+  &__banner {
+    &__buttons {
+      @include positioning(70%);
+    }
+  }
+}
+
+.shop {
+  width: 100%;
+  @include textAlign();
+
+  &__heading {
+    background-color: $tertiary-color;
+
+    &__title {
+      padding-top: 65px;
+      font-size: 80px;
+      letter-spacing: 2px;
+    }
+
+    &__paragraph {
+      padding-top: 35px;
+      padding-bottom: 65px;
+    }
+  }
+
+  &__filters {
+    background-color: $secundary-color;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 400px;
+    margin: 50px 25px 0 25px;
+    background-color: $secundary-color;
+    border-radius: 25px;
+
+    &__img {
+      img {
+        width: 90%;
+        margin-top: 10%;
+      }
+    }
+
+    &__info {
+      color: $primary-color;
+      position: relative;
+      bottom: 0;
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: right;
+    }
+
+    .shop__name-price {
+      display: flex;
+      font-size: 22px;
+      margin: 10px 20px 0 20px;
+      justify-content: space-between;
+    }
+  }
+}
+
+.login {
+  width: 100%;
+  @include textAlign();
+
+  &__heading {
+    background-color: $tertiary-color;
+
+    &__title {
+      padding-top: 65px;
+      font-size: 80px;
+      letter-spacing: 2px;
+    }
+
+    &__paragraph {
+      padding-top: 35px;
+      padding-bottom: 65px;
+    }
+  }
+
+  &__create-account {
+    background-color: $secundary-color;
+    text-decoration: underline;
+    color: $primary-color;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 400px;
+    margin: 50px 25px 0 25px;
+    background-color: $secundary-color;
+    border-radius: 25px;
+
+    &__img {
+      height: 100px;
+      img {
+        height: 100px;
+        margin-top: 10%;
+      }
+    }
+
+    &__info {
+      color: $primary-color;
+      position: relative;
+      bottom: 0;
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: right;
+    }
+
+    .shop__name-price {
+      display: flex;
+      font-size: 22px;
+      margin: 10px 20px 0 20px;
+      justify-content: space-between;
+    }
+  }
+}
